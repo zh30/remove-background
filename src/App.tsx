@@ -1,10 +1,10 @@
-import { pipeline } from "@xenova/transformers";
+import { pipeline, env } from "@xenova/transformers";
 import { useCallback, useState } from "react";
 import { Textarea } from "./components/ui/textarea";
 import { Button } from "./components/ui/button";
 
+env.allowLocalModels = false;
 // env.useBrowserCache = false;
-// env.allowLocalModels = false;
 function App() {
   const [result, setResult] = useState<unknown>(null);
   const [value, setValue] = useState('');
